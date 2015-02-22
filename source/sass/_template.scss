@@ -11,16 +11,15 @@ $susy: (
 );
 
 body {
+	margin: 0;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	font-family: sans-serif;
-	overflow-y: scroll;
-	line-height: 1.6em;
+	font: 18px/1.6em sans-serif;
 	color: $text-color-dark;
-	margin: 0;
+	overflow-y: scroll;
 }
 
 .page-wrapper {
-	max-width: 960px;
+	max-width: 1140px;
 	margin: 0 auto;
 }
