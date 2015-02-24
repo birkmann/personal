@@ -10,8 +10,20 @@ myApp.config(function ($routeProvider) {
         templateUrl:'templates/homepage.html',
         controller: 'homepageCtrl'
     })
+    .when('/work', {
+        templateUrl:'templates/work.html',
+    })
     .when('/services', {
         templateUrl:'templates/services.html',
+    })
+    .when('/about', {
+        templateUrl:'templates/about.html',
+    })
+    .when('/blog', {
+        templateUrl:'templates/blog.html',
+    })
+    .when('/contact', {
+        templateUrl:'templates/contact.html',
     })
     .otherwise({
         redirectTo: '/'
