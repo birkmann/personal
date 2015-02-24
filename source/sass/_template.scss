@@ -22,4 +22,74 @@ body {
 .page-wrapper {
 	max-width: 1140px;
 	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header-main {
+	background: #202020;
+	color: #fff;
+	@include clearfix;
+	.logo {
+		padding: 15px 0;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include breakpoint(tablet){
+			float: left;
+		}
+	}
+	.nav-main {
+		ul {
+			margin: 0;
+			padding: 0;
+			@include clearfix;
+			@include breakpoint(tablet){
+				float: right;
+			}
+			li {
+				list-style: none;
+				@include breakpoint(tablet) {
+					float: left;
+				}
+				a {
+					padding: 15px 0px;
+					display: block;
+					color: #fff;
+					text-decoration: none;
+					text-align: center;
+					@include breakpoint(tablet){
+						padding: 15px 20px;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+.emotion {
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+	&.emotion-home {
+		background: url("../img/home/home-small.jpg") no-repeat center top;
+		background-size: cover;
+		@include breakpoint(tablet){
+			background: url("../img/home/home-medium.jpg") no-repeat center top;
+			background-size: cover;
+		}
+		@include breakpoint(desktop){
+			background: url("../img/home/home-big.jpg") no-repeat center top;
+			background-size: cover;
+			min-height: 600px;
+		}
+	}
+	.overlay {
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+	}
 }

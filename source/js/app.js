@@ -7,23 +7,22 @@ var myApp = angular.module('myApp', [
 myApp.config(function ($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl:'templates/homepage.html',
-        controller: 'homepageCtrl'
+        templateUrl:'templates/home.html'
     })
     .when('/work', {
-        templateUrl:'templates/work.html',
+        templateUrl:'templates/work.html'
     })
     .when('/services', {
-        templateUrl:'templates/services.html',
+        templateUrl:'templates/services.html'
     })
     .when('/about', {
-        templateUrl:'templates/about.html',
+        templateUrl:'templates/about.html'
     })
     .when('/blog', {
-        templateUrl:'templates/blog.html',
+        templateUrl:'templates/blog.html'
     })
     .when('/contact', {
-        templateUrl:'templates/contact.html',
+        templateUrl:'templates/contact.html'
     })
     .otherwise({
         redirectTo: '/'
