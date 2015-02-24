@@ -19,10 +19,18 @@ body {
 	overflow-y: scroll;
 }
 
+h1 {
+	font-weight: normal;
+}
+
 .page-wrapper {
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.content-wrapper {
+	padding: 50px 0 100px;
 }
 
 .header-main {
@@ -61,6 +69,10 @@ body {
 					@include breakpoint(tablet){
 						padding: 15px 20px;
 						text-align: left;
+						&:hover {
+							background: #fff;
+							color: #202020;
+						}
 					}
 				}
 			}
