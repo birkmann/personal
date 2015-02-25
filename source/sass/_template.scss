@@ -14,13 +14,17 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	font: 18px/1.6em sans-serif;
+	font: 18px/1.8em 'Open Sans', sans-serif;
 	color: $text-color-dark;
 	overflow-y: scroll;
 }
 
 h1 {
 	font-weight: normal;
+}
+
+p {
+	color: #555;
 }
 
 .page-wrapper {
