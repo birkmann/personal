@@ -21,6 +21,7 @@ body {
 
 h1 {
 	font-weight: normal;
+	margin: 0 0 25px;
 }
 
 p {
@@ -34,7 +35,14 @@ p {
 }
 
 .content-wrapper {
+	position: relative;
+	z-index: 2;
+	background: #fff;
 	padding: 50px 0 100px;
+	@include breakpoint(tablet){
+		padding: 50px;
+		margin: -100px 0 0;
+	}
 }
 
 .header-main {
