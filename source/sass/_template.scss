@@ -147,3 +147,31 @@ p {
 		}
 	}
 }
+
+.row-contact {
+	@include clearfix;
+	.first-col {
+		input,
+		textarea {
+			width: 100%;
+			border-top: 0 none;
+			border-left: 0 none;
+			border-right: 0 none;
+			border-bottom: 1px solid #aaa;
+			padding: 15px;
+			margin: 0 0 15px;
+			outline: 0 none;
+		}
+		textarea {
+			min-height: 200px;
+		}
+		@include breakpoint(tablet) {
+			@include span(6);
+		}
+	}
+	.second-col {
+		@include breakpoint(tablet) {
+			@include span(6 last);
+		}
+	}
+}
