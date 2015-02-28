@@ -119,21 +119,26 @@ p {
 }
 
 .footer-main {
+	margin: 20px 0 0;
 	padding: 25px 0 50px;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	ul {
 		margin: 0;
 		padding: 0;
+		text-align: center;
 		@include clearfix;
+		@include breakpoint(tablet) {
+			text-align: center;
+		}
 		li {
 			list-style: none;
 			@include breakpoint(tablet) {
-				float: right;
+				display: inline-block;
 			}
 			a {
 				display: block;
 				text-decoration: none;
-				color: #666;
+				color: #aaa;
 				line-height: 40px;
 				text-align: center;
 				@include breakpoint(tablet) {
@@ -141,7 +146,7 @@ p {
 					text-align: left;
 				}
 				&:hover {
-					color: #202020;
+					color: #666;
 				}
 			}
 		}
