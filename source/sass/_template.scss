@@ -20,12 +20,29 @@ body {
 }
 
 h1 {
+	text-align: center;
 	font-weight: normal;
 	margin: 0 0 25px;
 }
 
-p {
-	color: #555;
+p.lead {
+	max-width: 800px;
+	margin: 0 auto;
+	color: #666;
+}
+
+hr {
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 1.25em 0 1.1875em;
+	height: 0;
+}
+
+hr.dotted {
+	border-color: #ddd;
+	border-style: dashed;
+	margin: 3em 0;
 }
 
 .page-wrapper {
@@ -52,7 +69,8 @@ p {
 	.logo {
 		padding: 15px 0;
 		display: block;
-		color: #fff;
+		color: #666;
+		font-weight: bold;
 		text-decoration: none;
 		text-transform: uppercase;
 		@include breakpoint(tablet){
@@ -97,19 +115,27 @@ p {
 	min-height: 400px;
 	position: relative;
 	&.emotion-home {
+		/* 
 		background: url("../img/home/home-small.jpg") no-repeat center top;
 		background-size: cover;
+		*/
+		background: #ffaf02;
 		@include breakpoint(tablet){
+			/*
 			background: url("../img/home/home-medium.jpg") no-repeat center top;
 			background-size: cover;
+			*/
 		}
 		@include breakpoint(desktop){
+			/*
 			background: url("../img/home/home-big.jpg") no-repeat center top;
 			background-size: cover;
+			*/
 			min-height: 500px;
 		}
 	}
 	.overlay {
+		display: none;
 		background: rgba(0,0,0,0.5);
 		position: absolute;
 		width: 100%;
@@ -162,8 +188,10 @@ p {
 			border-top: 0 none;
 			border-left: 0 none;
 			border-right: 0 none;
-			border-bottom: 1px solid #aaa;
-			padding: 15px;
+			border-bottom: 1px solid #eee;
+			color: #202020;
+			font: 16px/1.6em sans-serif;
+			padding: 15px 0;
 			margin: 0 0 15px;
 			outline: 0 none;
 		}
@@ -177,6 +205,29 @@ p {
 	.second-col {
 		@include breakpoint(tablet) {
 			@include span(6 last);
+		}
+	}
+}
+
+.ul-services {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+		padding: 5px 10px;
+		border: 1px solid #ddd;
+		color: #666;
+		display: inline-block;
+		margin: 0 5px 15px;
+	}
+}
+
+.about-wrapper {
+	.avatar {
+		max-width: 200px;
+		height: auto;
+		@include breakpoint(tablet) {
+			margin: -50px;
 		}
 	}
 }
