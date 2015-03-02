@@ -63,7 +63,7 @@ hr.dotted {
 }
 
 .header-main {
-	background: #202020;
+	background: #000000;
 	color: #fff;
 	@include clearfix;
 	.logo {
@@ -156,7 +156,7 @@ hr.dotted {
 				color: #fff;
 				text-decoration: none;
 				&:hover {
-					color: #ffaf02;
+					color: #000;
 				}
 			}
 		}
