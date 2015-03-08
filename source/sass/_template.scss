@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	font: 18px/1.8em 'Open Sans', sans-serif;
+	font: 22px/1.8em sans-serif;
 	color: $text-color-dark;
 	overflow-y: scroll;
 }
@@ -38,8 +38,59 @@ nav {
 	}
 }
 
+h1 {
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 25px;
+}
+
 .page-wrapper {
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.header-main {
+	padding: 15px 0;
+}
+
+.logo {
+	text-transform: uppercase;
+}
+
+.nav-main {
+	margin: 25px 0;
+	ul {
+		@include clearfix;
+		li {
+			@include breakpoint(tablet){
+				float: left;
+			}
+			a {
+				color: #aaa;
+				@include breakpoint(tablet){
+					margin-right: 25px;
+				}
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+.row-contact {
+	input,
+	textarea {
+		width: 100%;
+		padding: 20px 0;
+		border: 0 none;
+		border-bottom: 1px solid #000;
+		outline: 0 none;
+		font-size: 22px;
+		color: #000;
+	}
+	textarea {
+		min-height: 200px;
+	}
 }
