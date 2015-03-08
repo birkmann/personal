@@ -38,10 +38,17 @@ nav {
 	}
 }
 
-h1 {
+h1,
+h2 {
 	font-family: "Oswald", sans-serif;
 	text-transform: uppercase;
-	margin: 0 0 25px;
+	margin: 50px 0;
+}
+
+.amp {
+	font-family: 'Baskerville', 'Goudy Old Style', 'Palatino', 'Book Antiqua', serif;
+	font-style: italic;
+	font-weight: normal;
 }
 
 .page-wrapper {
@@ -53,61 +60,6 @@ h1 {
 .logo {
 	display: none;
 	text-transform: uppercase;
-}
-
-/*
-.nav-main {
-	margin: 25px 0;
-	ul {
-		@include clearfix;
-		li {
-			@include breakpoint(tablet){
-				float: left;
-			}
-			a {
-				color: #aaa;
-				@include breakpoint(tablet){
-					margin-right: 25px;
-				}
-				&:hover {
-					color: #000;
-				}
-			}
-		}
-	}
-}
-*/
-
-.nav-main {
-	display: none;
-	position: absolute;
-	z-index: 500;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.9);
-	padding: 50px 0;
-	ul {
-		max-width: 800px;
-		margin: 0 auto;
-		text-align: center;
-		@include clearfix;
-		li {
-			display: inline-block;
-			a {
-				display: block;
-				padding: 10px;
-				color: #fff;
-				font: 70px/1.4em "Oswald", sans-serif;
-				font-weight: bold;				
-				text-transform: uppercase;
-				&:hover {
-					color: #000;
-				}
-			}
-		}
-	}
 }
 
 .row-contact {
@@ -122,7 +74,11 @@ h1 {
 		color: #000;
 	}
 	textarea {
-		min-height: 200px;
+		min-height: 400px;
+		line-height: 1.8em;
+	}
+	form {
+		margin: 10px 0 50px;
 	}
 }
 
@@ -136,44 +92,72 @@ h1 {
 		transform: translate3d(0,0,0);
 		height: 100vh;
 	}
-}
-
-.hero:before {
-	content: "";
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,.8)
-}
-
-.hero__content {
-	z-index: 101;
-	position: relative;
-	padding: 200px 100px;
-	max-width: 760px;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8)
+	}
+	h1 {
+		font-size: 50px;
+		font-weight: 100;
+		color: white;
+		margin: 0;
+	}
+	.wrapper {
+		z-index: 101;
+		position: relative;
+		padding: 10px;
+		@include breakpoint(tablet){
+			padding: 100px;
+			h1 {
+				margin-top: 150px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.amp {
+		font-size: 1.8em;
+	}
+	.btn {
+		background: #202020;
+		color: white;
+		text-decoration: none;
+		padding: 10px 40px;
+		margin: 20px 15px 20px 0;
+		display: inline-block;
+		border-radius: 3px;
+		font-size: 20px;
+		&:hover {
+			background: #fff;
+			color: #202020;
+		}
+	}
 }
 
 @-webkit-keyframes slide {
 	0%   { background-position: left; }
-	50%   { background-position: right; }
+	50%  { background-position: right; }
 	100% { background-position: left; }
 }
 
-.hero h1 {
-	font-size: 50px;
-	font-weight: 100;
-	color: white;
-	margin: 0;
-}
-
-.btn {
-	background: #202020;
-	color: white;
-	text-decoration: none;
-	padding: 10px 40px;
-	margin: 20px 0;
-	display: inline-block;
-	border-radius: 3px;
-	font-size: 20px;
+.work {
+	@include clearfix;
+	a {
+		display: block;
+		color: #fff;
+		background: #202020;
+		line-height: 200px;
+		text-align: center;
+		@include breakpoint(tablet){
+			width: 50%;
+			float: left;
+		}
+		&:hover {
+			background: #aaa;
+			color: #202020;
+		}
+	}
 }
