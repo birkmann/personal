@@ -19,241 +19,27 @@ body {
 	overflow-y: scroll;
 }
 
-h1 {
-	text-align: center;
-	font-weight: normal;
-	margin: 50px 0;
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: stroke;
+	}
 }
 
-p.lead {
-	max-width: 800px;
-	margin: 0 auto;
-	color: #666;
-}
-
-hr {
-	border: solid #ddd;
-	border-width: 1px 0 0;
-	clear: both;
-	margin: 1.25em 0 1.1875em;
-	height: 0;
-}
-
-hr.dotted {
-	border-color: #ddd;
-	border-style: dashed;
-	margin: 3em 0;
+nav {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+		}
+	}
 }
 
 .page-wrapper {
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0 15px;
-}
-
-.content-wrapper {
-	position: relative;
-	z-index: 2;
-	background: #fff;
-	padding: 50px 0 100px;
-	@include breakpoint(tablet){
-		padding: 50px;
-		margin: -100px 0 0;
-	}
-}
-
-.header-main {
-	background: #000000;
-	color: #fff;
-	@include clearfix;
-	.logo {
-		padding: 15px 0;
-		display: block;
-		color: #fff;
-		letter-spacing: 2px;
-		font-weight: bold;
-		text-decoration: none;
-		text-transform: uppercase;
-		@include breakpoint(tablet){
-			float: left;
-		}
-	}
-	.nav-main {
-		ul {
-			margin: 0;
-			padding: 0;
-			@include clearfix;
-			@include breakpoint(tablet){
-				float: right;
-			}
-			li {
-				list-style: none;
-				@include breakpoint(tablet) {
-					float: left;
-				}
-				a {
-					display: block;
-					color: #fff;
-					text-decoration: none;
-					text-transform: uppercase;
-					font: 14px/32px sans-serif;
-					font-weight: bold;
-					text-align: center;
-					@include breakpoint(tablet){
-						padding: 15px 20px;
-						text-align: left;
-						&:hover {
-							background: #fff;
-							color: #202020;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-.emotion {
-	width: 100%;
-	min-height: 400px;
-	position: relative;
-	&.emotion-home {
-		background: url("../img/home/home-small.jpg") no-repeat center center;
-		background: url("https://static.zipjet.co.uk/Simon-Dach-Stra%C3%9Fe_Berlin.jpg") no-repeat center center;
-		background-size: cover;
-		/* background: #ffaf02; */
-		@include breakpoint(tablet){
-			background: url("../img/home/home-medium.jpg") no-repeat center center;
-			background: url("https://static.zipjet.co.uk/Simon-Dach-Stra%C3%9Fe_Berlin.jpg") no-repeat center center;
-			background-size: cover;
-			min-height: 500px;
-		}
-		@include breakpoint(desktop){
-			background: url("../img/home/home-big.jpg") no-repeat center center;
-			background: url("https://static.zipjet.co.uk/Simon-Dach-Stra%C3%9Fe_Berlin.jpg") no-repeat center center;
-			background-size: cover;
-			min-height: 600px;
-		}
-	}
-	.overlay {
-		background: rgba(0,0,0,0.25);
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		img {
-			width: 100%;
-			max-width: 500px;
-			margin: 75px auto 0;
-			display: block;
-			@include breakpoint(desktop){
-				max-width: 700px;
-				margin: 125px auto 0;
-			}
-		}
-		h2 {
-			color: #fff;
-			font: 30px/1.6em 'Oswald', sans-serif;
-			font-weight: bold;
-			text-transform: uppercase;
-			display: block;
-			text-align: center;
-			margin: 20px auto;
-			a {
-				color: #fff;
-				text-decoration: none;
-				&:hover {
-					color: #000;
-				}
-			}
-		}
-	}
-}
-
-.footer-main {
-	margin: 20px 0 0;
-	padding: 25px 0 50px;
-	font-size: 0.8em;
-	ul {
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		@include clearfix;
-		@include breakpoint(tablet) {
-			text-align: center;
-		}
-		li {
-			list-style: none;
-			@include breakpoint(tablet) {
-				display: inline-block;
-			}
-			a {
-				display: block;
-				text-decoration: none;
-				color: #aaa;
-				line-height: 40px;
-				text-align: center;
-				@include breakpoint(tablet) {
-					margin-left: 25px;
-					text-align: left;
-				}
-				&:hover {
-					color: #666;
-				}
-			}
-		}
-	}
-}
-
-.row-contact {
-	@include clearfix;
-	.first-col {
-		input,
-		textarea {
-			width: 100%;
-			border-top: 0 none;
-			border-left: 0 none;
-			border-right: 0 none;
-			border-bottom: 1px solid #eee;
-			color: #202020;
-			font: 16px/1.6em sans-serif;
-			padding: 15px 0;
-			margin: 0 0 15px;
-			outline: 0 none;
-		}
-		textarea {
-			min-height: 200px;
-		}
-		@include breakpoint(tablet) {
-			@include span(6);
-		}
-	}
-	.second-col {
-		@include breakpoint(tablet) {
-			@include span(6 last);
-		}
-	}
-}
-
-.ul-services {
-	margin: 0;
-	padding: 0;
-	li {
-		list-style: none;
-		padding: 5px 10px;
-		border: 1px solid #ddd;
-		color: #666;
-		display: inline-block;
-		margin: 0 5px 15px;
-	}
-}
-
-.about-wrapper {
-	.avatar {
-		max-width: 200px;
-		height: auto;
-		@include breakpoint(tablet) {
-			margin: -50px;
-		}
-	}
 }
