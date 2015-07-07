@@ -5,6 +5,11 @@
 
 body {
 	font: normal 18px/1.6em sans-serif;
+	font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	color: #CECECE;
+	background: #222125;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -34,5 +39,65 @@ body {
 				@include span(6 last);
 			}
 		}
+	}
+}
+
+#gradient {
+	width: 100%;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+}
+
+.amp {
+	font-family: "Baskerville", serif;
+	font-style: italic;
+}
+
+.page {
+	position: absolute;
+	padding: 15px;
+	margin: auto;
+	width: 100%;
+	.intro {
+		position: relative;
+		top: 50%;
+		max-width: 1000px;
+		margin: 0 auto;
+		color: #fff;
+	}
+}
+
+.content {
+	h2 {
+		font-size: 3.5em;
+		font-weight: normal;
+		margin: 20px 0 40px;
+	}
+	h3 {
+		font-size: 1.95em;
+		font-weight: normal;
+		margin: 15px 0 30px;
+		color: #685884;
+	}
+	p {
+  		font-size: 1.25em;
+  		line-height: 1.5em;
+  		margin: 10px 0 20px;
+	}
+	a {
+  		text-decoration: none;
+  		color: #5C5EDC;
+  		outline: none;
+	}
+}
+
+
+
+p {
+	font-size: 1.4em;
+	line-height: 1.7em;
+	a {
+		color: #fff;
 	}
 }
